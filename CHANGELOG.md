@@ -16,16 +16,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `import` now skips directories matching `$_ZO_EXCLUDE_DIRS`.
 - POSIX: support for non-Cygwin Windows environments (e.g. Busybox).
 - Fish: Space-Tab completions now display and run the selected command.
-- Bash/POSIX: `z` now honors `$CDPATH`.
+- Bash/POSIX/Zsh: `z` now honors `$CDPATH`.
 
 ### Changed
 
+- `import` now takes a subcommand instead of the `--from` flag.
 - `import` now auto-detects database files.
 - Nushell: export commands so the init script can be imported with `use`.
 
 ### Fixed
 
-- Bash/POSIX: `z` now handles relative paths through symlinked directories.
+- Bash/POSIX/Zsh: `z` now handles relative paths through symlinked directories.
 - Bash/Fish/POSIX/Zsh: `_ZO_RESOLVE_SYMLINKS` now works on Windows.
 - Bash: handle `$PROMPT_COMMAND` values ending in a semicolon.
 - PowerShell: navigate to home directory with `z` on drives that don't define `HOME`.
